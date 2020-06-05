@@ -18,12 +18,22 @@ topics:
     theory_id: 6865
   - title: Introduction to OOP
     theory_id: 3614
+  - title: Immutability
+    theory_id: 7929
   - title: Libraries
     theory_id: 8504
   - title: Binary numbers
     theory_id: 5544
   - title: IDE
     theory_id: 3805
+  - title: What is an exception
+    theory_id: 3497
+  - title: NPE
+    theory_id: 1945
+  - title: Generic programming
+    theory_id: 3492
+  - title: Functional interfaces and lambda expressions
+    theory_id: 3601
   - title: The basic window in Swing
     theory_id: 5514
   - title: Swing components
@@ -76,6 +86,8 @@ topics:
     theory_id: 3498
   - title: Branching statements
     theory_id: 3507
+  - title: Ternary operator
+    theory_id: 3506
   - title: Defining methods
     theory_id: 3590
   - title: The main method
@@ -86,12 +98,16 @@ topics:
     theory_id: 3801
   - title: Write, compile, and run
     theory_id: 3739
+  - title: Errors in programs
+    theory_id: 3536
   - title: Defining classes
     theory_id: 3618
   - title: Package
     theory_id: 3621
   - title: Constructor
     theory_id: 3535
+  - title: Objects
+    theory_id: 4727
   - title: Instance methods
     theory_id: 3495
   - title: Access modifiers
@@ -120,27 +136,15 @@ topics:
     theory_id: 3615
   - title: Anonymous classes
     theory_id: 3564
+  - title: Boxing and unboxing
+    theory_id: 3595
   1:
-  - title: Immutability
-    theory_id: 7929
   - title: Computer programming
     theory_id: 8739
-  - title: What are streams
-    theory_id: 5533
-  - title: Input streams
-    theory_id: 9723
-  - title: What is an exception
-    theory_id: 3497
   - title: Hierarchy of exceptions
     theory_id: 3570
   - title: Exception handling
     theory_id: 3552
-  - title: NPE
-    theory_id: 1945
-  - title: Generic programming
-    theory_id: 3492
-  - title: Functional interfaces and lambda expressions
-    theory_id: 3601
   - title: Introduction to operating systems
     theory_id: 9704
   - title: Command line overview
@@ -151,16 +155,8 @@ topics:
     theory_id: 3636
   - title: Writing files
     theory_id: 3652
-  - title: Ternary operator
-    theory_id: 3506
   - title: JVM, JRE, and JDK
     theory_id: 3499
-  - title: Errors in programs
-    theory_id: 3536
-  - title: Objects
-    theory_id: 4727
-  - title: Boxing and unboxing
-    theory_id: 3595
   - title: Running programs on your computer
     theory_id: 3746
   2:

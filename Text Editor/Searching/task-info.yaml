@@ -912,12 +912,6 @@ files:
 - name: FileDoesNotExist
   visible: true
   learner_created: true
-- name: SomeFile.txt
-  visible: true
-  learner_created: true
-- name: AnotherFile.txt
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/38/stages/204/implement
 status: Solved
 record: -1

@@ -1,6 +1,8 @@
 package editor;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 
 import java.awt.event.ActionListener;
@@ -165,6 +167,23 @@ public class TextEditor extends JFrame {
         //EXIT
         ActionListener onExit = actionEvent -> dispose();
 
+        DocumentListener onSearchPatternChange = new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent documentEvent) {
+                searchResults.clear();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent documentEvent) {
+                searchResults.clear();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent documentEvent) {
+                searchResults.clear();
+            }
+        };
+
         //INITIALIZE ELEMENTS SETTINGS --------------------------------------------------------------------
         //TOOLBAR
         toolBar.setLayout(experimentLayout);
@@ -172,6 +191,7 @@ public class TextEditor extends JFrame {
 
         textArea.setName("TextArea");
         textArea.setBounds(10, 10, 260, 200);
+        textArea.getDocument().addDocumentListener(onSearchPatternChange);
         add(textArea);
 
         scrollableTextArea.setName("ScrollPane");
@@ -199,6 +219,7 @@ public class TextEditor extends JFrame {
         //SEARCH FIELD --------------------------------------------------------------------------------------------------
         eSearch.setName("SearchField");
         eSearch.setPreferredSize(new Dimension(300, 43));
+        eSearch.getDocument().addDocumentListener(onSearchPatternChange);
         toolBar.add(eSearch);
 
         //REGEX CHECKBOX --------------------------------------------------------------------------------------------------
@@ -295,9 +316,15 @@ class SearchTask extends SwingWorker<List<SearchResult>, SearchResult> {
     private String target;
     private String source;
 
+    public static void showSearchResult(JTextArea textArea, int index, String foundText) {
+        textArea.setCaretPosition(index + foundText.length());
+        textArea.select(index, index + foundText.length());
+        textArea.grabFocus();
+    }
+
     @Override
     protected List<SearchResult> doInBackground() throws Exception {
-        
+
         return null;
     }
 }
